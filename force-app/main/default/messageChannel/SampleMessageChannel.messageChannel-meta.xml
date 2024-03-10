@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningMessageChannel >
+    <masterLabel>SampleMessageChannel</masterLabel>
+    <isExposed>true</isExposed>
+    <description>Message Channel to pass data</description>
+    <lightningMessageFields>
+        <fieldName>lmsData</fieldName>
+        <description>This is the field to pass data</description>
+    </lightningMessageFields>
+</LightningMessageChannel>

@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Account Contact Use Case">
+     <div class="slds-p-horizontal_small">
+         <lightning-combobox
+         name="Account"
+         label="Enter Account Name"
+         value={selectedAccount}
+         placeholder="Enter Account Name"
+         options={accountList}
+         onchange={handleChange} ></lightning-combobox>
+         <div class="slds-m-top_small">
+             <lightning-button label="Create Related Contact" title="relatedcontactcreate" onclick={createContact} class="slds-m-left_x-small" disabled={buttonDisabled}></lightning-button>
+             <lightning-button label="Display Account and Related Contacts" title="relatedcontactdisplay" onclick={showAccountsContacts} class="slds-m-left_x-small" disabled={buttonDisabled}></lightning-button>
+         </div>      
+         <template lwc:if={showModal}>
+             <c-create-related-contact selected-accountid={selectedAccount} onclose={closeHandler}></c-create-related-contact>
+         </template>
+     </div> 
+    </lightning-card>  
+ </template>
+ 

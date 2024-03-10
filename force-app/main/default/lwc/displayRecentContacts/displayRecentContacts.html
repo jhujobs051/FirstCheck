@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Account Contacts">
+        <div class="slds-p-horizontal_small">
+            <template if:true={acclist}>
+                <lightning-datatable data={acclist} columns={columns} key-field="Id">
+                </lightning-datatable>
+            </template>  
+            <template if:true={conlist}>
+                <lightning-datatable data={conlist} columns={columns1} key-field="Id">
+                </lightning-datatable>
+            </template>      
+        </div>
+    </lightning-card>   
+</template>
